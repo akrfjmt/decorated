@@ -1,0 +1,25 @@
+{
+    "name": "akrfjmt/decorated",
+    "authors": [
+        {
+            "name": "Akira Fujimoto",
+            "email": "hr6nnn@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Akrfjmt\\Decorated\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Akrfjmt\\Decorated\\Tests\\": "tests/",
+            "Akrfjmt\\Decorated\\Tests\\Util\\": "tests/util"
+        }
+    }
+}
