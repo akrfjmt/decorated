@@ -13,6 +13,11 @@ class Decorated
     /** @var Decorator[] */
     private $decorators;
 
+    /**
+     * Decorated constructor.
+     * @param $core
+     * @param Decorator[] ...$decorators
+     */
     public function __construct($core, Decorator ...$decorators)
     {
         $this->core = $core;

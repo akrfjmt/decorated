@@ -6,8 +6,8 @@ decorator pattern in PHP
 
 ## Usage
 
-1. implement `Decorator` interface
-2. decorate your instance with `Decorated`
+1. implement [`Decorator`](src/Decorator.php) interface
+2. decorate your instance with [`Decorated`](src/Decorated.php)
 3. call instance's method
 
-Please see the tests for details.
+Please see the [decorator example](src/YankeeDecorator.php) and the [test](tests/YankeeDecoratorTest.php) for details.
