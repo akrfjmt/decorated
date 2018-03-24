@@ -2,7 +2,6 @@
 
 decorator pattern in PHP
 
-- Slim3
 - PHP ≧ 7.2.x
 
 ## Usage
