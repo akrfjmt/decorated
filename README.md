@@ -10,4 +10,4 @@ decorator pattern in PHP
 2. decorate your instance with [`Decorated`](src/Decorated.php)
 3. call instance's method
 
-Please see the [decorator example](src/YankeeDecorator.php) and the [test](tests/YankeeDecoratorTest.php) for details.
+Please see the [decorator example](src/TailDecorator.php) and the [test](tests/TailDecoratorTest.php) for details.
