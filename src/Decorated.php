@@ -29,18 +29,25 @@ class Decorated
      * @param array $args
      * @return mixed
      * @throws Throwable
-     * @throws ReflectionException
      */
     public function __call($name, array $args)
     {
         /** @var Decorator $next */
         $next = array_pop($this->decorators);
-        if ($next instanceof Decorator) {
-            return $next->decorate($name, $args, $this);
-        } else {
-            $reflMethod = new ReflectionMethod($this->core, $name);
-            return $reflMethod->invokeArgs($this->core, $args);
+
+        try {
+            if ($next instanceof Decorator) {
+                $result = $next->decorate($name, $args, $this);
+            } else {
+                $reflMethod = new ReflectionMethod($this->core, $name);
+                $result = $reflMethod->invokeArgs($this->core, $args);
+            }
+        } catch (Throwable $e) {
+            $this->decorators []= $next;
+            throw $e;
         }
+        $this->decorators []= $next;
+        return $result;
     }
 }
 

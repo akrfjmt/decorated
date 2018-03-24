@@ -2,7 +2,7 @@
     <testsuites>
         <testsuite name="decorator">
             <file>tests/NopDecoratorTest.php</file>
-            <file>tests/YankeeDecoratorTest.php</file>
+            <file>tests/TailDecoratorTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
